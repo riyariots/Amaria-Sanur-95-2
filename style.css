@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Bungee', sans-serif;
+}
+
+body {
+    margin: 0; /* Removes default margin that might cause overflow */
+    overflow-x: hidden; /* Hides horizontal scrolling */
+}
+
+.dropdown-menu{
+    background: #1dc369;
+    position: absolute;
+    display: none;
+    width: auto;
+    height: auto;
+    margin: 0px 0px;
+}
+
+.dropdown-menu li a{
+    color: rgb(255, 255, 255);
+    padding: fill;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.bg{
+    width: 80%;
+    min-height: 97vh;
+    background-position: center;
+    background-image: url(BACKGROUND.png);
+    background-size: cover;
+    padding: 10px 10%;
+    position: relative;
+    overflow: hidden;
+
+}
+
+nav{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    padding: 0px 0px;
+    margin: -10px -140px;
+    position: absolute;
+    width: 1420px;
+    height: 80px;
+}
+
+nav ul li{
+    display: inline-block;  
+    list-style: none;
+    margin: 10px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 1000;
+    font-size: 30px;
+}
+
+.Content{
+    margin-top: 15%;
+    margin-left: -5%;
+}
+
+.image{
+    width: 450px;
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+ }
+
+ .anim{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+ }
+
+@keyframes moveup{
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.image.anim{
+    animation-delay: 0.2s;
+}
+
+.opening{
+ margin: 15px 20px;
+}
+
+.optxt{
+    font-size: 30px;
+    font-family: "Dongle";
+    line-height: 23px;
+    margin: 10px;
+}
+
+.Gallery {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    margin: 5% auto 0;
+    box-sizing: border-box;
+}
+
+.image-box {
+    margin: 0 1%;
+    flex-grow: 1;
+    flex-basis: 0;
+    transition: flex-basis 0.5s ease-in-out; 
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, opacity 0.5s ease; 
+}
+
+.image-box:hover {
+    flex-basis: 50%;
+}
+
+.image-box:hover img {
+    transform: scale(1.05); 
+    opacity: 0.9;
+}
+
+.cltxt{
+    position: absolute;
+    width: 1403px;
+    margin-top: 20px;
+    font-family: "Dongle";
+    padding: 10px 0px;
+    background-color: #0069dc;
+    font-size: x-large;
+    text-align: center;
+    color: white;
+}
